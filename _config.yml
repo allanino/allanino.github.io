@@ -2,7 +2,7 @@ title:            Allan Costa
 tagline:          My digital home.
 description:      I just want to share some things and keep all in the same place.
 #Comment out url when working locally to resolve base urls correctly
-#url: allanino.me
+url: "http://allanino.me"
 # Hack to use in Twitter API. {{ site.url }} wasn't working and url messy up other things
 domain: allanino.me
 
@@ -13,9 +13,9 @@ owner:
   bio:            "A learner."
   email:          allan@allanino.me
   googleplus:     "108116428141422531231"
-  twitter:        allanino      
+  twitter:        allanino
   github:         allanino
-  flickr:         allanino      
+  flickr:         allanino
   disqus:         allanino
   location:       "Brazil"
 
@@ -49,7 +49,7 @@ kramdown:
   use_coderay: false
 
   coderay:
-    coderay_line_numbers: 
+    coderay_line_numbers:
     coderay_line_numbers_start: 1
     coderay_tab_width: 4
     coderay_bold_every: 10
