@@ -13,7 +13,7 @@ image:
 
 Two weeks ago I stumbled across an awesome service that allows one to download paid scientific articles for free. It's called Sci-Hub and you can go ahead and access it here: [sci-hub.org].
 
-You may notice the site is Russian, but it is not a problem, as it has a search field and you probably know how to use Google. Don't fear, just search for a paper you are interested in and it will do a search on Google Scholar. 
+You may notice the site is Russian, but it is not a problem, as it has a search field and you probably know how to use Google. Don't fear, just search for a paper you are interested in and it will do a search on Google Scholar.
 
 So what's the deal? The deal is that you have access to all papers returned in the search, even those you wouldn't have if you did a plain search.
 
@@ -25,13 +25,15 @@ This is a really useful service. Information should be more open and the high pr
 
 ## Chrome extension
 
-To make it even easier, I created a Chrome extension to do the job of appending ".sci-hub.org" for us. 
+To make it even easier, I created a Chrome extension to do the job of appending ".sci-hub.org" for us.
 
-You can [install it via Chrome store]. 
+You can [install it via Chrome store].
 
 To use, just go to the article's page you want to access and click the extension button.
 
 EDIT: A friend of mine asked for the extension's code, so here is a link to its [Github repo].
+
+EDIT 2: The extension got removed from Chrome Store in October 29, 2015. I got an email with some explanations, including that they "don't allow products or services that facilitate unauthorized access to content on websites, such as circumventing paywalls or logins restrictions.". So if you still want to use the plugin (note you don't need to), you can follow the instructions I added to the [Github repo] to load it from your machine.
 
 [Github repo]:https://github.com/allanino/sci-hub-fy
 [1]:http://infospace.ischool.syr.edu/2012/05/29/academic-journals-are-too-expensive-for-harvard-elsevier-is-mega-greedy-and-why-this-stinks-for-future-librarians/
