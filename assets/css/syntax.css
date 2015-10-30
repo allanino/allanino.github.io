@@ -1,5 +1,5 @@
-.highlight  { 
-  background: #222222; 
+.highlight  {
+  background: #222222;
   color: #ffffff ;
   padding: 0.2em 0.9em;
   margin-bottom: 1em;
@@ -18,9 +18,9 @@ p > code, p > a > code, li > code, h3 > code
 border-radius: 4px;
 -webkit-border-radius: 4px;
 -moz-border-radius: 4px;
-color: #cccccc;
+color: #555555  ;
 /*color: white*/
-background: #222222;
+background: #FBFAF8;
 font-size: 0.75em;
 font-family: "Consolas", "Courier New", "Courier", "FreeMono", monospace;
 padding-bottom: 2px;
