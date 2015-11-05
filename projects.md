@@ -7,11 +7,26 @@ image:
     feature: moon_f.jpg
 ---
 
+## Math Music
+
+Some years ago I published some [videos on YouTube](https://www.youtube.com/playlist?list=PL7A3780FBFE2350EB)
+where we can listen to some mathematical constants. People liked it a lot and some
+of them wanted me to do things differently, like to use different scales or to
+play different tracks together.
+
+So that's what I've done in this project: I took that videos to the next level,
+allowing users to create their own math tracks in an interactive web page, full
+with notes mapping, speed selection and some (few) instruments.
+
+See it:
+<a href="https://github.com/allanino/numbers-music" target="_blank"><span class="icon-github2"></span></a>
+<a href="{{ site.url }}/numbers-music" target="_blank"><span class="icon-html5"></span></a>
+
 ## Monty Hall Simulation
 
-Monty Hall problem is a surprising probability problem. Many people don't believe the answer, so I created this simple simulator. Now you don't have excuses for not trusting the math! If you don't even know what it's all about, see my [blog post] introducing it. 
+Monty Hall problem is a surprising probability problem. Many people don't believe the answer, so I created this simple simulator. Now you don't have excuses for not trusting the math! If you don't even know what it's all about, see my [blog post] introducing it.
 
-See it: 
+See it:
 <a href="https://github.com/allanino/monty-hall-simulation" target="_blank"><span class="icon-github2"></span></a>
 <a href="{{ site.url }}/monty-hall-simulation" target="_blank"><span class="icon-html5"></span></a>
 
@@ -19,21 +34,21 @@ See it:
 
 This is a Python implementation of one of the first scalable and reliable algorithm for DNA storage of information. The algorithm was created by Nick Goldman et al and published in [Nature], where I got the necessary details for a full implementation. Let me know if you put your name inside a bacteria!
 
-See it: 
+See it:
 <a href="https://github.com/allanino/DNA" target="_blank"><span class="icon-github2"></span></a>
 
 ## Ballistic Game
 
-I started this project an year ago, but haven't worked on it for a while, so it's very raw. To be fair, it isn't a game, it's just a physics simulator that uses [PyGame] to display cannon balls trajectories, created to help anyone wondering how they could have an angrybirdsy touch in their game. I also like to use it when teaching physics. Thinkind ahead, I would like to create more accurate time representations and to add some drones to get shot. Maybe I'll do that with HTML5, as I'm trying to learn it. 
+I started this project an year ago, but haven't worked on it for a while, so it's very raw. To be fair, it isn't a game, it's just a physics simulator that uses [PyGame] to display cannon balls trajectories, created to help anyone wondering how they could have an angrybirdsy touch in their game. I also like to use it when teaching physics. Thinkind ahead, I would like to create more accurate time representations and to add some drones to get shot. Maybe I'll do that with HTML5, as I'm trying to learn it.
 
-See it: 
+See it:
 <a href="https://github.com/allanino/BallisticGame" target="_blank"><span class="icon-github2"></span></a>
 
 ## Markdown-LaTeX
 
 This is a simple way to write LaTeX equations in your Github repo's README. Now I know that Github Pages is the way to go in case you want some fancy presentation for your project, but if anyone want their README to look pretty in their repo page, this script can do that. It just takes a README written in Markdown + LaTex (with equations between $$) and replace all equations with image links for them rendered in [CodeCogs].
 
-See it: 
+See it:
 <a href="https://github.com/allanino/markdown-latex" target="_blank"><span class="icon-github2"></span></a>
 
 [blog post]:{{ site.url }}/blog/math/monty-hall-problem/
