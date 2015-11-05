@@ -7,7 +7,7 @@ image:
     feature: moon_f.jpg
 ---
 
-## Math Music
+## Numbers Music
 
 Some years ago I published some [videos on YouTube](https://www.youtube.com/playlist?list=PL7A3780FBFE2350EB)
 where we can listen to some mathematical constants. People liked it a lot and some
