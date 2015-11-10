@@ -7,6 +7,22 @@ image:
     feature: moon_f.jpg
 ---
 
+## RNN music of the day
+
+Each day I post a music composed by a trained Recurrent Neural Network ([RNN](https://en.wikipedia.org/wiki/Recurrent_neural_network)).
+
+The idea started when Andrej Karpathy posted in his blog the
+article [The Unreasonable Effectiveness of Recurrent Neural Networks](http://karpathy.github.io/2015/05/21/rnn-effectiveness/),
+in which he talks about training a RNN to generate text a character at a time after being
+trained on some dataset. I trained a RNN to learn to generate music in the [ABC notation](https://en.wikipedia.org/wiki/ABC_notation).
+
+You can find more details about it <a href="{{ site.url }}/rnn-music-of-the-day/about" target="_blank">here</a>.
+
+
+See it:
+<a href="{{ site.url }}/rnn-music-of-the-day" target="_blank"><span class="icon-html5"></span></a>
+<a href="https://github.com/allanino/rnn-music-of-the-day" target="_blank"><span class="icon-github2"></span></a>
+
 ## Numbers Music
 
 Some years ago I published some [videos on YouTube](https://www.youtube.com/playlist?list=PL7A3780FBFE2350EB)
@@ -19,16 +35,16 @@ allowing users to create their own math tracks in an interactive web page, full
 with notes mapping, speed selection and some (few) instruments.
 
 See it:
-<a href="https://github.com/allanino/numbers-music" target="_blank"><span class="icon-github2"></span></a>
 <a href="{{ site.url }}/numbers-music" target="_blank"><span class="icon-html5"></span></a>
+<a href="https://github.com/allanino/numbers-music" target="_blank"><span class="icon-github2"></span></a>
 
 ## Monty Hall Simulation
 
 Monty Hall problem is a surprising probability problem. Many people don't believe the answer, so I created this simple simulator. Now you don't have excuses for not trusting the math! If you don't even know what it's all about, see my [blog post] introducing it.
 
 See it:
-<a href="https://github.com/allanino/monty-hall-simulation" target="_blank"><span class="icon-github2"></span></a>
 <a href="{{ site.url }}/monty-hall-simulation" target="_blank"><span class="icon-html5"></span></a>
+<a href="https://github.com/allanino/monty-hall-simulation" target="_blank"><span class="icon-github2"></span></a>
 
 ## DNA information encoding
 
