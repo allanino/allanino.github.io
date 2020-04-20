@@ -53,6 +53,22 @@ This is a Python implementation of one of the first scalable and reliable algori
 See it:
 <a href="https://github.com/allanino/DNA" target="_blank"><span class="icon-github2"></span></a>
 
+## Fractals
+
+I wanted to have a deeper understading of how colored fractals were generated, so I implemented a Mandelbrot set renderer using only HTML5 canvas with Javascript. It's really raw and feature lacking, however it might be of interest to someone doing their own implementation. As a bonus, I have also implemented a [Budhabrot renderer]({{ site.url }}/fractals/budhabrot).
+
+See it:
+<a href="{{ site.url }}/fractals" target="_blank"><span class="icon-html5"></span></a>
+<a href="https://github.com/allanino/fractals" target="_blank"><span class="icon-github2"></span></a>
+
+## Game of Life
+
+I first met [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) in the book [The Recursive Universe](https://www.amazon.com/Recursive-Universe-Complexity-Scientific-Knowledge/dp/0809252023) by William Poundstone.  My first implementation of it was using an Excel spreadsheet controlled by some VBA macros (it was preety slow, as you might have guessed). Now I have implemented a new version, using HTML5 + Javascript.
+
+See it:
+<a href="{{ site.url }}/game-of-life" target="_blank"><span class="icon-html5"></span></a>
+<a href="https://github.com/allanino/game-of-life" target="_blank"><span class="icon-github2"></span></a>
+
 ## Ballistic Game
 
 I started this project an year ago, but haven't worked on it for a while, so it's very raw. To be fair, it isn't a game, it's just a physics simulator that uses [PyGame] to display cannon balls trajectories, created to help anyone wondering how they could have an angrybirdsy touch in their game. I also like to use it when teaching physics. Thinkind ahead, I would like to create more accurate time representations and to add some drones to get shot. Maybe I'll do that with HTML5, as I'm trying to learn it.
