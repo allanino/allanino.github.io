@@ -20,6 +20,21 @@ Take a look at some of my pictures and feel free to join me at Flickr!
 </figure>
 
 <figure>
+    <a href="https://www.flickr.com/photos/allanino/47150910501/">
+        <img src="https://live.staticflickr.com/7859/47150910501_7f8788e4c3_k.jpg" width="1024" height="683">
+    </a>
+    <figcaption>Diamond Beach</figcaption>
+</figure>
+
+
+<figure>
+    <a href="https://www.flickr.com/photos/allanino/47098567762/">
+        <img src="https://live.staticflickr.com/7905/47098567762_dfcd2f9dd3_k.jpg" width="1024" height="683">
+    </a>
+    <figcaption>A Winter Scene</figcaption>
+</figure>
+
+<figure>
     <a href="https://www.flickr.com/photos/allanino/47098611912/">
         <img src="https://live.staticflickr.com/7898/47098611912_c8b9e7fb5c_k.jpg" width="1024" height="683">
     </a>
