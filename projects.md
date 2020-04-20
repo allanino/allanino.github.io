@@ -77,6 +77,14 @@ See it:
 <a href="{{ site.url }}/monty-hall-simulation" target="_blank"><span class="icon-html5"></span></a>
 <a href="https://github.com/allanino/monty-hall-simulation" target="_blank"><span class="icon-github2"></span></a>
 
+## Domain coloring complex functions
+
+I used domain coloring to create lots of plots in my Master's dissertation, so I created a web application using HTML5 + Javascript to allow readers to play with some polynomials.
+
+See it:
+  <a href="{{ site.url }}/domain-coloring/en" target="_blank"><span class="icon-html5"></span></a>
+<a href="https://github.com/allanino/domain-coloring/en" target="_blank"><span class="icon-github2"></span></a>
+
 ## Ballistic Game
 
 I started this project an year ago, but haven't worked on it for a while, so it's very raw. To be fair, it isn't a game, it's just a physics simulator that uses [PyGame] to display cannon balls trajectories, created to help anyone wondering how they could have an angrybirdsy touch in their game. I also like to use it when teaching physics. Thinkind ahead, I would like to create more accurate time representations and to add some drones to get shot. Maybe I'll do that with HTML5, as I'm trying to learn it.
