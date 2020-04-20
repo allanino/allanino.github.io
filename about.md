@@ -14,8 +14,6 @@ Besides my interest in ontological questions and other philosophical matters, I'
 
 I have also a lot of interest in diverse fields, from physics and astronomy, which I studied as an undergraduate for two years, to artificial intelligence, programming, science fiction, photography and music (I'm teaching myself to play the piano).
 
-Currently, I'm a student at UFSCar (Universidade Federal de São Carlos) in Brazil, doing Master's studies in Mathematics.
-
 I created this website to talk about the things I like, which includes all of above subjects and a little more. But more than a blog, it is also a hub for any projects I come to conceive.
 
 If you want more: [about.me/allanino][1]
