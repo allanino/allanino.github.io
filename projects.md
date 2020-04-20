@@ -38,20 +38,20 @@ See it:
 <a href="{{ site.url }}/numbers-music" target="_blank"><span class="icon-html5"></span></a>
 <a href="https://github.com/allanino/numbers-music" target="_blank"><span class="icon-github2"></span></a>
 
-## Monty Hall Simulation
-
-Monty Hall problem is a surprising probability problem. Many people don't believe the answer, so I created this simple simulator. Now you don't have excuses for not trusting the math! If you don't even know what it's all about, see my [blog post] introducing it.
-
-See it:
-<a href="{{ site.url }}/monty-hall-simulation" target="_blank"><span class="icon-html5"></span></a>
-<a href="https://github.com/allanino/monty-hall-simulation" target="_blank"><span class="icon-github2"></span></a>
-
 ## DNA information encoding
 
 This is a Python implementation of one of the first scalable and reliable algorithm for DNA storage of information. The algorithm was created by Nick Goldman et al and published in [Nature], where I got the necessary details for a full implementation. Let me know if you put your name inside a bacteria!
 
 See it:
 <a href="https://github.com/allanino/DNA" target="_blank"><span class="icon-github2"></span></a>
+
+## Vicsek Model Simulation
+
+I read about Vicsek model in a Scientific American article and was fascinated by it simplicity. I could not help but implement it. As my tool of choice, I used HTML5 + Javascript.
+
+See it:
+<a href="{{ site.url }}/vicsek-model-simulation" target="_blank"><span class="icon-html5"></span></a>
+<a href="https://github.com/allanino/vicsek-model-simulation" target="_blank"><span class="icon-github2"></span></a>
 
 ## Fractals
 
@@ -68,6 +68,14 @@ I first met [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Gam
 See it:
 <a href="{{ site.url }}/game-of-life" target="_blank"><span class="icon-html5"></span></a>
 <a href="https://github.com/allanino/game-of-life" target="_blank"><span class="icon-github2"></span></a>
+
+## Monty Hall Simulation
+
+Monty Hall problem is a surprising probability problem. Many people don't believe the answer, so I created this simple simulator. Now you don't have excuses for not trusting the math! If you don't even know what it's all about, see my [blog post] introducing it.
+
+See it:
+<a href="{{ site.url }}/monty-hall-simulation" target="_blank"><span class="icon-html5"></span></a>
+<a href="https://github.com/allanino/monty-hall-simulation" target="_blank"><span class="icon-github2"></span></a>
 
 ## Ballistic Game
 
