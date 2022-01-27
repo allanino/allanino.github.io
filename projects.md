@@ -55,7 +55,7 @@ See it:
 
 ## Fractals
 
-I wanted to have a deeper understading of how colored fractals were generated, so I implemented a Mandelbrot set renderer using only HTML5 canvas with Javascript. It's really raw and feature lacking, however it might be of interest to someone doing their own implementation. As a bonus, I have also implemented a [Budhabrot renderer]({{ site.url }}/fractals/budhabrot).
+I wanted to have a deeper understading of how colored fractals were generated, so I implemented a Mandelbrot set renderer using only HTML5 canvas with Javascript. It's really raw and feature lacking, however it might be of interest to someone doing their own implementation. As a bonus, I have also implemented a [Buddhabrot renderer]({{ site.url }}/fractals/buddhabrot).
 
 See it:
 <a href="{{ site.url }}/fractals" target="_blank"><span class="icon-html5"></span></a>
