@@ -1,0 +1,53 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getPostPath } from '../utils/blog';
+
+const posts = (await getCollection('blog'))
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+  .slice(0, 3);
+---
+
+<BaseLayout>
+  <div class="max-w-5xl mx-auto px-4 py-24 sm:py-32">
+    <section class="max-w-3xl">
+      <h1 class="text-5xl sm:text-6xl font-bold tracking-tight mb-8">
+        Physicist, Programmer, & Hobbyist Photographer.
+      </h1>
+      <p class="text-xl text-zinc-600 dark:text-zinc-400 leading-relaxed mb-10">
+        Welcome to my personal corner of the web. I write about mathematics,
+        share technical projects, and showcase photography from my travels.
+      </p>
+      <div class="flex space-x-4">
+        <a href="/blog" class="bg-zinc-900 dark:bg-white text-white dark:text-zinc-950 px-6 py-3 rounded-full font-medium hover:opacity-90 transition-opacity">
+          Read the blog
+        </a>
+        <a href="/about" class="bg-zinc-100 dark:bg-zinc-900 px-6 py-3 rounded-full font-medium hover:bg-zinc-200 dark:hover:bg-zinc-800 transition-colors">
+          About me
+        </a>
+      </div>
+    </section>
+
+    <section class="mt-32">
+      <div class="flex justify-between items-end mb-12">
+        <h2 class="text-2xl font-bold">Latest Writing</h2>
+        <a href="/blog" class="text-blue-600 hover:underline font-medium">All posts →</a>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {posts.map(post => (
+          <a href={getPostPath(post)} class="group block">
+            <time class="text-sm text-zinc-500 mb-2 block">
+              {post.data.date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+            </time>
+            <h3 class="text-xl font-bold group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors leading-tight mb-3">
+              {post.data.title}
+            </h3>
+            <p class="text-zinc-600 dark:text-zinc-400 line-clamp-2">
+              {post.data.description}
+            </p>
+          </a>
+        ))}
+      </div>
+    </section>
+  </div>
+</BaseLayout>

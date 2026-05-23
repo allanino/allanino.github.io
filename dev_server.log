@@ -1,0 +1,47 @@
+
+> civil-conjunction@0.0.1 dev
+> astro dev
+
+[vite] connected.
+14:50:44 [types] Generated 1ms
+[vite] connected.
+14:50:45 [content] Syncing content
+14:50:45 [content] Synced content
+14:50:45 [vite] Port 4321 is in use, trying another one...
+ astro  v6.3.7 ready in 5627 ms
+┃ Local    http://localhost:4322/
+┃ Network  use --host to expose
+14:50:45 watching for file changes...
+14:52:04 [200] /blog/math/a-mais-bela-formula-da-matematica-parte-i 201ms
+14:57:00 [WARN] [router] A `getStaticPaths()` route pattern was matched, but no matching static path was found for requested path `/blog/math/a-mais-bela-formula-da-matematica-parte-I/`.
+
+Possible dynamic routes being matched: src/pages/blog/[...slug].astro.
+14:57:00 [404] /blog/math/a-mais-bela-formula-da-matematica-parte-I/ 15ms
+14:58:15 [WARN] [router] A `getStaticPaths()` route pattern was matched, but no matching static path was found for requested path `/blog/math/a-mais-bela-formula-da-matematica-parte-I/`.
+
+Possible dynamic routes being matched: src/pages/blog/[...slug].astro.
+14:58:15 [404] /blog/math/a-mais-bela-formula-da-matematica-parte-I/ 1ms
+14:59:01 [watch] /src/styles/global.css
+14:59:23 [WARN] [router] A `getStaticPaths()` route pattern was matched, but no matching static path was found for requested path `/blog/math/2015-11-03-a-mais-bela-formula-da-matematica-parte-I/`.
+
+Possible dynamic routes being matched: src/pages/blog/[...slug].astro.
+14:59:23 [404] /blog/math/2015-11-03-a-mais-bela-formula-da-matematica-parte-I/ 7ms
+14:59:51 [WARN] [router] A `getStaticPaths()` route pattern was matched, but no matching static path was found for requested path `/blog/math/a-mais-bela-formula-da-matematica-parte-I/`.
+
+Possible dynamic routes being matched: src/pages/blog/[...slug].astro.
+14:59:51 [404] /blog/math/a-mais-bela-formula-da-matematica-parte-I/ 8ms
+15:00:29 [200] /blog/ 68ms
+15:00:58 [200] /blog/math/a-mais-bela-formula-da-matematica-parte-i/ 39ms
+15:03:23 [200] / 49ms
+15:05:05 [200] /blog/math/a-mais-bela-formula-da-matematica-parte-i/ 8ms
+15:05:12 [200] / 7ms
+[vite] program reload
+[vite] An error happened during full reload
+Failed to load url astro:server-app.js (resolved id: astro:server-app.js). Does the file exist?
+Error: Failed to load url astro:server-app.js (resolved id: astro:server-app.js). Does the file exist?
+    at loadAndTransform (file:///app/node_modules/vite/dist/node/chunks/config.js:22679:33)
+[vite] program reload
+[vite] program reload
+[vite] program reload
+[vite] program reload
+[vite] program reload

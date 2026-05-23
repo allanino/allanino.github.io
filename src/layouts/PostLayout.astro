@@ -1,0 +1,40 @@
+---
+import BaseLayout from './BaseLayout.astro';
+const { post } = Astro.props;
+const { title, date, categories, image } = post.data;
+const featureImage = typeof image === 'string' ? image : image?.feature;
+---
+<BaseLayout title={title} description={post.data.description}>
+  <article class="max-w-3xl mx-auto px-4 py-12">
+    {featureImage && (
+      <img
+        src={featureImage.startsWith('http') ? featureImage : `/images/${featureImage}`}
+        alt={title}
+        class="w-full h-auto rounded-lg mb-8 shadow-sm"
+      />
+    )}
+    <header class="mb-8">
+      <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-2 leading-tight tracking-tight">{title}</h1>
+      <div class="flex items-center text-sm text-gray-500 dark:text-gray-400 space-x-4">
+        <time datetime={date.toISOString()}>
+          {date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+        </time>
+        {categories && categories.length > 0 && (
+          <span class="capitalize">{categories[0]}</span>
+        )}
+      </div>
+    </header>
+    <div class="prose prose-lg dark:prose-invert max-w-none prose-headings:font-bold prose-a:text-blue-600 dark:prose-a:text-blue-400">
+      <slot />
+    </div>
+  </article>
+</BaseLayout>
+
+<style is:global>
+  /* Elegant LaTeX centering */
+  .katex-display {
+    margin: 1.5em 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+</style>

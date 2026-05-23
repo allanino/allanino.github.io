@@ -1,0 +1,60 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const projects = [
+  {
+    title: "RNN music of the day",
+    description: "Each day I post a music composed by a trained Recurrent Neural Network (RNN).",
+    link: "https://github.com/allanino/rnn-music-of-the-day"
+  },
+  {
+    title: "Numbers Music",
+    description: "Listen to mathematical constants. Allows users to create their own math tracks in an interactive web page.",
+    link: "https://github.com/allanino/numbers-music"
+  },
+  {
+    title: "DNA information encoding",
+    description: "Python implementation of a scalable and reliable algorithm for DNA storage of information.",
+    link: "https://github.com/allanino/DNA"
+  },
+  {
+    title: "Vicsek Model Simulation",
+    description: "Simulation of the Vicsek model using HTML5 + Javascript.",
+    link: "https://github.com/allanino/vicsek-model-simulation"
+  },
+  {
+    title: "Fractals",
+    description: "Mandelbrot set renderer and Buddhabrot renderer implemented with HTML5 canvas.",
+    link: "https://github.com/allanino/fractals"
+  },
+  {
+    title: "Game of Life",
+    description: "Implementation of Conway's Game of Life using HTML5 + Javascript.",
+    link: "https://github.com/allanino/game-of-life"
+  },
+  {
+    title: "Monty Hall Simulation",
+    description: "Simulator for the surprising Monty Hall probability problem.",
+    link: "https://github.com/allanino/monty-hall-simulation"
+  },
+  {
+    title: "Domain coloring complex functions",
+    description: "Web application using HTML5 + Javascript to visualize complex functions.",
+    link: "https://github.com/allanino/domain-coloring/en"
+  }
+];
+---
+<BaseLayout title="Projects">
+  <div class="max-w-3xl mx-auto px-4 py-16">
+    <h1 class="text-3xl font-bold mb-8">Projects</h1>
+    <div class="grid gap-8">
+      {projects.map(project => (
+        <div class="border border-zinc-200 dark:border-zinc-800 rounded-lg p-6 hover:border-blue-500 transition-colors">
+          <h2 class="text-xl font-bold mb-2">{project.title}</h2>
+          <p class="text-zinc-600 dark:text-zinc-400 mb-4">{project.description}</p>
+          <a href={project.link} target="_blank" class="text-blue-600 hover:underline font-medium">View on GitHub →</a>
+        </div>
+      ))}
+    </div>
+  </div>
+</BaseLayout>
