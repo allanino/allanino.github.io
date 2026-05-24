@@ -11,10 +11,16 @@
   body {
     @apply text-zinc-900 bg-white transition-colors duration-300;
   }
+
   .dark body {
     @apply text-zinc-100 bg-zinc-950;
   }
 }
 
-/* Ensure headings and prose also respond to dark mode if needed,
-   though @tailwindcss/typography's prose-invert usually handles it. */
+/* Remove automatic backticks from inline code */
+@layer utilities {
+  .prose code::before,
+  .prose code::after {
+    content: "" !important;
+  }
+}
