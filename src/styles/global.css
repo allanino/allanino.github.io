@@ -1,0 +1,26 @@
+@import "tailwindcss";
+@import "katex/dist/katex.min.css";
+@plugin "@tailwindcss/typography";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Inter", "system-ui", "-apple-system", "sans-serif";
+}
+
+@layer base {
+  body {
+    @apply text-zinc-900 bg-white transition-colors duration-300;
+  }
+
+  .dark body {
+    @apply text-zinc-100 bg-zinc-950;
+  }
+}
+
+/* Remove automatic backticks from inline code */
+@layer utilities {
+  .prose code::before,
+  .prose code::after {
+    content: "" !important;
+  }
+}
