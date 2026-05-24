@@ -1,12 +1,10 @@
 ---
-layout: post
 title:  "A mais bela fórmula da Matemática (Parte I)"
 description: "Notas sobre um seminário"
 date:   2015-11-03 18:00:00
 tags: [math, portuguese]
 categories: math
 math: true
-comments: true
 image:
     feature: star_trail_f.jpg
 ---
@@ -181,14 +179,17 @@ $$ a^x = \left ( 1 + \frac{kx}{j} \right ) ^ j. \tag{3}\label{eq:3} $$
 
 Nossa intenção é aplicar o Teorema Binomial à essa última equação. No entanto, utilizaremos uma versão com os coeficientes binomiais simplificados (cancelando grande parte dos fatoriais) e que por sinal continua válida para a generalização da fórmula binomial com potência real demonstrada por Newton pela primeira vez. O Teorema Binomial nos diz que, dado  $ n \in \mathbb{N}  $ e  $ x,y \in \mathbb{R}$ :
 $$
+\begin{aligned}
 (x+y)^n = {n \choose 0 } x^n + {n \choose 1 }x^{n-1}y^1 + {n \choose 2 }x^{n-2}y^2 + {n \choose 3 }x^{n-3}y^3 + \cdots = \\\
 \frac{n!}{0!n!}x^n + \frac{n!}{1!(n-1)!}x^{n-1}y^1 + \frac{n!}{2!(n-2)!}x^{n-2}y^2 + \frac{n!}{3!(n-3)}x^{n-3}y^3 + \cdots = \\\
 1x^n + \frac{n(n-1)!}{1!(n-1)!}x^{n-1}y^1 + \frac{n(n-1)(n-2)!}{2!(n-2)!}x^{n-2}y^2 + \frac{n(n-1)(n-2)(n-3)!}{3!(n-3)!}x^{n-3}y^3 + \cdots = \\\
 x^n + \frac{n}{1!}x^{n-1}y^1 + \frac{n(n-1)}{2!}x^{n-2}y^2 + \frac{n(n-1)(n-2)}{3!}x^{n-3}y^3 + \cdots
+\end{aligned}
 $$
 
 Aplicando o Teorema Binomial na forma acima com  $ n = j $ ,  $ x = 1  $ e  $ y = \frac{kx}{j}$ , obtemos:
 $$
+\begin{aligned}
 a^x = 1 + \frac{j}{1!} \cdot \frac{kx}{j} + \frac{j(j-1)}{2!} \cdot \frac{k^2x^2}{j^2} +  \frac{j(j-1)(j-2)}{3!} \cdot \frac{k^3x^3}{j^3} \\\
 +  \frac{j(j-1)(j-2)(j-3)}{4!} \cdot \frac{k^4x^4}{j^4} + \dots =\\\
 = 1 + \frac{j}{j} \cdot \frac{kx}{1!}+
@@ -205,6 +206,7 @@ a^x = 1 + \frac{j}{1!} \cdot \frac{kx}{j} + \frac{j(j-1)}{2!} \cdot \frac{k^2x^2
 + 1 \left ( 1 - \frac{1}{j}
 \right ) \left ( 1- \frac{2}{j} \right ) \left ( 1- \frac{3}{j} \right )
  \cdot \frac{k^4x^4}{4!} + \dots
+\end{aligned}
 $$
 
 Agora, se lembrarmos que  $ j \rightarrow \infty $ , veremos que os termos  $\frac{1}{j}$ ,  $\frac{2}{j}$ ,  $\frac{3}{j}$ ,  $\frac{4}{j}, \dots \rightarrow 0 $ , e a monstruosidade acima se reduz a:
@@ -294,8 +296,10 @@ Antes, porém, deixaremos uma breve nota sobre a questão da convergência.
 Devemos enfatizar que todas essas somas em   $(\ref{eq:4})$ ,   $(\ref{eq:5})$ ,   $(\ref{eq:6})  $ e  $(\ref{eq:7})  $ são infinitas. Devemos sempre ser cuidadosos ao lidarmos com esse tipo de soma, devendo observar sob quais condições as somas fazem sentido, ou seja, quando (e se) elas convergem para um valor finito. Neste caso em particular, não é difícil provarmos que as somas em questão produzem resultados finitos para quaisquer  $ k, x \in \mathbb{R}$ , graças ao crescimento exponencial dos fatoriais nos denominadores, que crescem mais rapidamente que qualquer potência presente nos numeradores. Tudo isso pode ser demonstrado rigorosamente, mas demandaria ainda mais tempo deste breve seminário. Por hora, contemple  $(\ref{eq:5})  $ escrita da seguinte forma e observe como os denominadores crescem rapidamente:
 
 $$
+\begin{aligned}
 e^x =  1 + x + \frac{x^2}{2} + \frac{x^3}{6} + \frac{x^4}{24} + \frac{x^5}{120} + \frac{x^6}{720} + \frac{x^7}{5040} + \frac{x^8}{40320} + \\\
     \frac{x^9}{362880} + \frac{x^{10}}{3628800} + \frac{x^{11}}{39916800} + \dots
+\end{aligned}
 $$
 
 Se tomarmos  $ x = 2 $ , por exemplo, o termo de potência  $ 11  $ contribui com apenas  $\frac{2^{11}}{39916800} = \frac{2048}{39916800} \approx 0.0000513 $ ao resultado final.
@@ -312,22 +316,28 @@ k = \ln(1 + x) = \frac{(1+x)^\omega - 1}{\omega} \tag{9}\label{eq:9}.
 $$
 Agora, pelo binômio de Newton, temos:
 $$
+\begin{aligned}
 (1+x)^\omega = 1 + \frac{\omega}{1!} \cdot x + \frac{\omega(\omega-1)}{2!} \cdot x^2 + \frac{\omega(\omega-1)(\omega -2)}{3!} \cdot x^3 \\\
 +  \frac{\omega(\omega-1)(\omega-2)(\omega-3)}{4!} \cdot x^4 + \dots
+\end{aligned}
 $$
 Passando o número  $ 1  $ para o lado esquerdo e dividindo os dois lados por  $\omega $ , temos:
 $$
+\begin{aligned}
 \frac{(1+x)^\omega -1}{\omega} = \frac{1}{1!} \cdot x + \frac{(\omega-1)}{2!} \cdot x^2 + \frac{(\omega-1)(\omega -2)}{3!} \cdot x^3 \\\
 +  \frac{(\omega-1)(\omega-2)(\omega-3)}{4!} \cdot x^4 + \dots
+\end{aligned}
 $$
 Por outro lado,   $\omega  $ é um infinitesimal, ou seja,  $\omega \to 0 $ , de modo que:
 
 $$
+\begin{aligned}
 \ln(1 + x) = \frac{(1+x)^\omega -1}{\omega} = \frac{1}{1!} \cdot x + \frac{(0-1)}{2!} \cdot x^2 + \frac{(0-1)(0-2)}{3!} \cdot x^3 \\\
 +  \frac{(0-1)(0-2)(-3)}{4!} \cdot x^4 + \dots = \\\
 \frac{1}{1!} \cdot x + \frac{-1}{2} \cdot x^2 + \frac{(-1)(-2)}{1 \cdot 2 \cdot 3} \cdot x^3 \\\
 +  \frac{(-1)(-2)(-3)}{1 \cdot 2 \cdot 3 \cdot 4} \cdot x^4 + \dots = \\\
 x - \frac{x^2}{2} + \frac{x^3}{3} - \frac{x^4}{4} + \dots
+\end{aligned}
 $$
 
 Ou seja, temos:
@@ -338,6 +348,7 @@ $$
 Observamos que aqui não temos mais os fatoriais nos denominadores e, de fato, essa série não converge para qualquer  $ x $ , mas apenas para  $-1 < x \leq 1 $ .
 Faça   $ x = 2 $, por exemplo, e veja como as somas parciais oscilam e parecem crescer casa vez mais em módulo:
 $$
+\begin{aligned}
 s_1 = 2 \\\
 s_2 = 2 - \frac{2^2}{2} = 0 \\\
 s_3 = 2 - \frac{2^2}{2} + \frac{2^3}{3} = 2.666... \\\
@@ -346,6 +357,7 @@ s_5 = 2 - \frac{2^2}{2} + \frac{2^3}{3} - \frac{2^4}{4} + \frac{2^5}{5} = 5.066.
 s_6 = 2 - \frac{2^2}{2} + \frac{2^3}{3} - \frac{2^4}{4} + \frac{2^5}{5} - \frac{2^6}{6} = 5.6 \\\
 s_7 = 2 - \frac{2^2}{2} + \frac{2^3}{3} - \frac{2^4}{4} + \frac{2^5}{5} - \frac{2^6}{6} + \frac{2^7}{7} = 12.6857142857... \\\
 s_8 = 2 - \frac{2^2}{2} + \frac{2^3}{3} - \frac{2^4}{4} + \frac{2^5}{5} - \frac{2^6}{6} + \frac{2^7}{7} - \frac{2^8}{8} = -19.3142857143...
+\end{aligned}
 $$
 O valor correto é  $\ln(1 + 2) = \ln(3) = 1.0986122886681098...$ .
 
@@ -355,8 +367,10 @@ $$
 $$
 e, utilizando uma bem conhecida propriedade dos logaritmos:
 $$
+\begin{aligned}
 \ln(1 + x) - \ln(1 - x) = \ln \left( \frac{1 + x}{1 - x} \right) = \left( x - \frac{x^2}{2} + \frac{x^3}{3} - \frac{x^4}{4} + \dots \right) \\\
 - \left( -x - \frac{x^2}{2} - \frac{x^3}{3} - \frac{x^4}{4} + \dots \right) = 2 \left(x + \frac{x^3}{3} + \frac{x^5}{5} + \dots \right)
+\end{aligned}
 $$
 
 Vamos destacar este último resultado:
@@ -366,6 +380,8 @@ $$
 
 Fazendo  $ x = \frac{1}{2}$ , temos  $\frac{1 + x}{1 - x} = \frac{1 + 1/2}{1 - 1/2} = 3  $ e, pela última série obtida:
 $$
+\begin{aligned}
 \ln(3) = \ln \left( \frac{1 + 1/2}{1 - 1/2} \right) =  2 \left(\frac{1}{2} + \frac{1}{2^3 3} + \frac{1}{2^5 5} + \frac{1}{2^7 7} \dots \right) = \\\ 1 + \frac{1}{12} + \frac{1}{80}  + \frac{1}{448} + \dots,
+\end{aligned}
 $$
 e agora a série converge para o valor correto de  $\ln(3)$ . Somando apenas os quatro primeiros termos mostrados acima já obtemos  $\ln(3) \approx 1.0981 $ , valor correto até a terceira casa decimal.

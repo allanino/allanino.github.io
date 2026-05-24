@@ -1,12 +1,10 @@
 ---
-layout: post
 title:  "A quick fix for some IPython notebook IOErrors"
 description: "It says some files are missing, like a custom.js."
 date:   2015-09-04 16:00:00
 tags: [linux, ubuntu, python, ipython, notebook]
 categories: programming
 math: false
-comments: true
 image:
     feature: night_sunset.jpg
 ---
@@ -16,7 +14,8 @@ error when starting a notebook from it.
 
 The error is pretty simple and has a quick fix for it:
 
-```console $ ipython notebook
+```console
+$ ipython notebook
 Traceback (most recent call last):
   File "/usr/local/bin/ipython", line 11, in <module>
     sys.exit(start_ipython())
@@ -70,13 +69,15 @@ The error message in the last line is pretty clear.
 The problem is I don't want to use any custom Javascript, so a dirty hack was to create
 an empty file with the name Ipython wanted:
 
-```console $ touch /home/allan/.ipython/profile_default/static/custom/custom.js
+```console
+$ touch /home/allan/.ipython/profile_default/static/custom/custom.js
 ```
 
 
 That fixed this first exception problem, but then it complained about another file:
 
-```console $ ipython notebook
+```console
+$ ipython notebook
 Traceback (most recent call last):
   File "/usr/local/bin/ipython", line 11, in <module>
     sys.exit(start_ipython())
@@ -127,7 +128,8 @@ IOError: [Errno 2] No such file or directory: '/home/allan/.ipython/profile_defa
 
 That simple hack worked again:
 
-```console $ touch /home/allan/.ipython/profile_default/static/custom/custom.css
+```console
+$ touch /home/allan/.ipython/profile_default/static/custom/custom.css
 ```
 
 Now I have Ipython notebook up and running without further problems.

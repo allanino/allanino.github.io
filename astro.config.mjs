@@ -8,10 +8,7 @@ import rehypeKatex from 'rehype-katex';
 export default defineConfig({
   site: 'https://allanino.github.io',
   integrations: [
-    mdx({
-      remarkPlugins: [remarkMath],
-      rehypePlugins: [rehypeKatex],
-    }),
+    mdx(),
     sitemap()
   ],
   markdown: {

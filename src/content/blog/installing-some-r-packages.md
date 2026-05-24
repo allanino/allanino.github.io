@@ -1,12 +1,10 @@
 ---
-layout: post
 title:  "Installing some R packages"
 description: "Quick troubleshooting installing xlsx and XML packages on Debian Wheezy"
 date:   2014-08-10 16:15:00
 tags: [r, coursera]
 categories: programming
 math: false
-comments: true
 image:
     feature: night_sunset.jpg
 ---
@@ -115,7 +113,8 @@ The downloaded source packages are in
 
 As you can see, it suggested me to run a command to add Java support to R, so I did it:
 
-```console $ R CMD javareconf
+```console
+$ R CMD javareconf
 Java interpreter : /usr/bin/java
 Java version     : 1.6.0_32
 Java home path   : /usr/lib/jvm/java-6-openjdk-amd64/jre
@@ -146,7 +145,8 @@ Another error! This time, something was wrong with the Java library linking.
 
 First thing I tryed was to change the Java version to 7:
 
-```console $ update-alternatives --config java
+```console
+$ update-alternatives --config java
 There are 2 choices for the alternative java (providing /usr/bin/java).
 
   Selection    Path                                            Priority   Status
@@ -160,14 +160,16 @@ Press enter to keep the current choice[*], or type selection number: 2
 
 It didn't work. So I took a drastic measure and installed everything from Java 7:
 
-```console $ apt-get install openjdk-7-*
+```console
+$ apt-get install openjdk-7-*
 ```
 
 And then the `R CMD javareconf` command worked! But I wasn't done.
 
 Back to RStudio I got another error when installing package  <span style="font-style:italic">rjava</span>, needed by  <span style="font-style:italic">xlsx</span> and the reason why I had to setup Java in the first place. This time the error message was complaining about a missing  <span style="font-style:italic">lzma</span> library. Unfortunately, I can't show you the exact error messsage, as I can't find the log in my system, but anyway, here is the solution:
 
-```console $ apt-get install liblzma-dev
+```console
+$ apt-get install liblzma-dev
 ```
 
 And then it worked! I could finally load my <span style="font-style:italic">xlsx</span> file and answer the quiz!
@@ -176,7 +178,8 @@ And then it worked! I could finally load my <span style="font-style:italic">xlsx
 
 After sucessfully installing  <span style="font-style:italic">xlsx</span>, I had to install the  <span style="font-style:italic">XML</span> package, but this one was a lot easier. The only dependency missing in my system was  <span style="font-style:italic">xml2-config</span>, which happend to be part of the  <span style="font-style:italic">libxml2-dev</span> package:
 
-```console $ apt-get install libxml2-dev
+```console
+$ apt-get install libxml2-dev
 ```
 
 After succesfully installing  <span style="font-style:italic">XML</span>     package at RStudio, I could finally finish this week quiz.

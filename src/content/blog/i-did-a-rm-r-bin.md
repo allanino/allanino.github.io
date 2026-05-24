@@ -1,19 +1,18 @@
 ---
-layout: post
 title:  "I did a rm -r /bin!"
 description: "How I used Docker to bring back some of my binaries."
 date:   2015-04-08 20:00:00
 tags: [linux, docker, ubuntu]
 categories: programming
 math: false
-comments: true
 image:
     feature: star_trail_f.jpg
 ---
 
 I just did something really stupid:
 
-```console $ sudo rm -r /bin
+```console
+$ sudo rm -r /bin
 ```
 
 I know, I know... I shouldn't have done that, but I assure you, that wasn't my intention.
@@ -21,7 +20,8 @@ I just wanted to remove a local `bin/` folder, which happened to be created by a
 root process, but you know, sometimes we just type a backslash in the wrong place.
 
 I was surprised when I tried to check if the folder was deleted:
-```console $ ls /bin
+```console
+$ ls /bin
 bash: ls: command not found
 ```
 
@@ -42,14 +42,16 @@ to mount it at `/temp_bin` (yeah, I'm that creative!).
 
 So, the whole thing I did was:
 
-```console $ docker run -ti -v /bin:/temp_bin ubuntu:14.04
+```console
+$ docker run -ti -v /bin:/temp_bin ubuntu:14.04
 root@ea3676d266f3:/# cp /bin/* temp_bin/
 root@ea3676d266f3:/# exit
 ```
 
 And now I have back at least some of my precious programs:
 
-```console $ ls /bin
+```console
+$ ls /bin
 bash          dir            lesspipe       ping                     tempfile
 bunzip2       dmesg          ln             ping6                    touch
 bzcat         dnsdomainname  loadkeys       plymouth                 true
@@ -79,5 +81,6 @@ df            lesskey        pidof          tar
 As a final tip, I had to reinstall some deleted packages that apt thinks are still
 around. To force a reinstallation of package `nano`, for example, I just did:
 
-```console $ sudo apt-get install --reinstall nano
+```console
+$ sudo apt-get install --reinstall nano
 ```
