@@ -167,15 +167,32 @@ Vejamos como a tabela fica para  $ a = 5 $ :
 A razão  $ k  $ é diferente para  $ a =5 $ , mas ela parece se aproximar de um valor determinado, assim como no caso  $ a = 2 $ .
 
 Tendo em vista que  $ k = \frac{\psi}{\omega} \implies \psi = k \omega $ , podemos reescrever a equação  $(\ref{eq:1})  $ como:
-$$ a^\omega = 1 + k \omega.\tag{2}\label{eq:2} $$
+$$
+\begin{aligned}
+a^\omega = 1 + k \omega.\tag{2}\label{eq:2}
+\end{aligned}
+$$
+
 Podemos, a partir dessa equação, isolar  $ a $ :
-$$ a = \left ( 1 + k \omega \right ) ^ {\frac{1}{\omega}}, $$
+$$
+\begin{aligned}
+a = \left ( 1 + k \omega \right ) ^ {\frac{1}{\omega}},
+\end{aligned}
+$$
 onde extraímos a raiz  $\omega $ -ésima da equação  $(\ref{eq:2})$ .
 
 Para calcularmos uma potência  $ x  $ qualquer de  $ a $ , não necessariamente infinitesimal, podemos fazer
-$$ a^x = \left ( 1 + k \omega \right ) ^ {\frac{x}{\omega}}. $$
+$$
+\begin{aligned}
+a^x = \left ( 1 + k \omega \right ) ^ {\frac{x}{\omega}}.
+\end{aligned}
+$$
 Observe que  $ j = \frac{x}{\omega} \rightarrow \infty $ , dada a natureza infinitesimal de  $\omega  $(um número finito divido por uma quantidade suficientemente próxima de zero terá como resultado um número tão grande quanto quisermos). Podemos escrever também  $\omega = \frac{x}{j}  $ e substituir na equação acima, junto com a definição de  $ j $ , o que nos dá
-$$ a^x = \left ( 1 + \frac{kx}{j} \right ) ^ j. \tag{3}\label{eq:3} $$
+$$
+\begin{aligned}
+a^x = \left ( 1 + \frac{kx}{j} \right ) ^ j. \tag{3}\label{eq:3}
+\end{aligned}
+$$
 
 Nossa intenção é aplicar o Teorema Binomial à essa última equação. No entanto, utilizaremos uma versão com os coeficientes binomiais simplificados (cancelando grande parte dos fatoriais) e que por sinal continua válida para a generalização da fórmula binomial com potência real demonstrada por Newton pela primeira vez. O Teorema Binomial nos diz que, dado  $ n \in \mathbb{N}  $ e  $ x,y \in \mathbb{R}$ :
 $$
