@@ -7,7 +7,7 @@ export async function GET(context) {
   return rss({
     title: 'Allan Costa',
     description: 'Mathematics, Programming, and Philosophy',
-    site: context.site || 'https://allancosta.github.io',
+    site: context.site || 'https://allanino.github.io',
     items: blog.map((post) => ({
       title: post.data.title,
       pubDate: post.data.date,
