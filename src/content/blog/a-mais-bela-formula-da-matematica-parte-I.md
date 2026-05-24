@@ -4,23 +4,21 @@ description: "Notas sobre um seminário"
 date:   2015-11-03 18:00:00
 tags: [math, portuguese]
 categories: math
-math: true
-image:
-    feature: star_trail_f.jpg
 ---
 
-Há alguns anos, enquanto ainda cursava a graduação, proferi um seminário entitulado "A mais bela fórmula da Matemática". Muitos amigos não puderam comparecer e solicitaram uma transcrição do seminário, a qual agora forneço, com apenas 7 anos de atraso.
+Há alguns anos, enquanto ainda cursava a graduação, proferi um seminário intitulado "A mais bela fórmula da Matemática". Muitos amigos não puderam comparecer e solicitaram uma transcrição do seminário, a qual agora forneço, com apenas 7 anos de atraso.
 
-O texto está divido em duas partes mais ou menos independentes, a depender de seus conhecimentos prévios. Nesta primeira parte falaremos sobre o número de Euler e veremos o que o torna tão especial. Na segunda parte (a ser postada) estudaremos a fórmula de Euler propriamente, uma belíssima ligação entre o número de Euler e as funções trigonométricas obtida com o auxílio dos números complexos.
+O texto está dividido em duas partes mais ou menos independentes, a depender de seus conhecimentos prévios. Nesta primeira parte falaremos sobre o número de Euler e veremos o que o torna tão especial. Na segunda parte (a ser postada) estudaremos a fórmula de Euler propriamente, uma belíssima ligação entre o número de Euler e as funções trigonométricas obtida com o auxílio dos números complexos.
 
 Como última observação antes de começarmos, quero deixar claro que a maioria dos desenvolvimentos que farei foram tirados de outras fontes, todavia os devidos créditos serão dados.
 
-<figure>
-    <a href="http://www.amazon.com/Dr-Eulers-Fabulous-Formula-Mathematical/dp/0691150370" >
-        <img src="http://press.princeton.edu/images/k8129.gif" style="width:60%">
-    </a>
-    <figcaption>Capa do livro de Paul J. Nahin, o qual contém várias aplicações da "Fabulosa Fórmula do Dr. Euler".</figcaption>
-</figure>
+<div align="center">
+
+[![Capa do livro de Paul J. Nahin](http://press.princeton.edu/images/k8129.gif)](http://www.amazon.com/Dr-Eulers-Fabulous-Formula-Mathematical/dp/0691150370)
+
+*Capa do livro de Paul J. Nahin, que contém várias aplicações da "Fabulosa Fórmula do Dr. Euler".*
+
+</div>
 
 ## I. O número de Euler
 Por muito tempo fiquei intrigado com o uso do número  $ e = 2.7182818...  $ como base do chamado logaritmo natural. Como poderia essa base ser natural? Por que esse número em particular? Como um número irracional pode ser mais natural que qualquer número natural? Encontrei uma resposta satisfatória no trabalho do próprio Euler, apresentado de forma magistral no livro <a href="http://www.amazon.com/Euler-Master-Dolciani-Mathematical-Expositions/dp/0883853280/">Euler: The Master of Us All</a> de William Dunham.
@@ -84,7 +82,7 @@ $$
 a^x = \left ( 1 + k \omega \right ) ^ {\frac{x}{\omega}}.
 \end{aligned}
 $$
-Observe que  $ j = \frac{x}{\omega} \rightarrow \infty $ , dada a natureza infinitesimal de  $\omega  $(um número finito divido por uma quantidade suficientemente próxima de zero terá como resultado um número tão grande quanto quisermos). Podemos escrever também  $\omega = \frac{x}{j}  $ e substituir na equação acima, junto com a definição de  $ j $ , o que nos dá
+Observe que  $ j = \frac{x}{\omega} \rightarrow \infty $ , dada a natureza infinitesimal de  $\omega  $(um número finito dividido por uma quantidade suficientemente próxima de zero terá como resultado um número tão grande quanto quisermos). Podemos escrever também  $\omega = \frac{x}{j}  $ e substituir na equação acima, junto com a definição de  $ j $ , o que nos dá
 $$
 \begin{aligned}
 a^x = \left ( 1 + \frac{kx}{j} \right ) ^ j. \tag{3}
@@ -167,7 +165,7 @@ e^x =  1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \frac{x^4}{4!} + \dots \tag{7},
 $$
 e vemos que é fácil calcular  $ e^x  $ também para  $ x  $ não infinitesimal. De fato, mais do que isso, podemos estimar o erro quando utilizamos  $(3)  $ para valores pequenos, mas não infinitesimais de  $\omega $ .
 
-Aconselho o leitor a utilizar uma calculadora científica, uma planilha ou até mesmo alguma linguagem de programação para obter estimativas para o número de Euler e suas potências através das equações listadas acima. Como exemplo, graças aos fatoriais em   $(6)$ , basta somarmos  $ 7  $ termos para obtermos um valor correto até a terceira casa decimal:
+Aconselho o leitor a utilizar uma calculadora científica, uma planilha ou até mesmo alguma linguagem de programação para obter estimativas para o número de Euler e suas potências através das equações listadas acima. Como exemplo, graças aos fatoriais em $(6)$ ,basta somarmos  $ 7  $ termos para obtermos um valor correto até a terceira casa decimal:
 $$
 e \approx 2.718.
 $$
@@ -201,13 +199,13 @@ $$
 Os valores limites de  $ k  $ obtidos nas tabelas acima são reconhecidos como  $\ln(2) = 0.6931471805599453...  $ e  $\ln(5) = 1.6094379124341003
 ...$ .
 
-Se você não está familiarizado com a função logaritmo, observer que ela é, por definição, justamente a função que nos fornece  $ k  $ dado  $ a $ . Seria interessante se tivéssemos um jeito fácil de calculá-la, não? Afinal, rapidamente encontramos problemas com a precisão dos cálculos se utilizarmos o método das tabelas acima. Fornecemos uma série para o cálculo do logaritmo na sessão bônus ao final, ainda seguindo Euler.
+Se você não está familiarizado com a função logaritmo, observe que ela é, por definição, justamente a função que nos fornece  $ k  $ dado  $ a $ . Seria interessante se tivéssemos um jeito fácil de calculá-la, não? Afinal, rapidamente encontramos problemas com a precisão dos cálculos se utilizarmos o método das tabelas acima. Fornecemos uma série para o cálculo do logaritmo na sessão bônus ao final, ainda seguindo Euler.
 
 Antes, porém, deixaremos uma breve nota sobre a questão da convergência.
 
 ### Nota sobre somas infinitas e convergência
 
-Devemos enfatizar que todas essas somas em   $(4)$ ,   $(5)$ ,   $(6)  $ e  $(7)$ são infinitas. Devemos sempre ser cuidadosos ao lidarmos com esse tipo de soma, devendo observar sob quais condições as somas fazem sentido, ou seja, quando (e se) elas convergem para um valor finito. Neste caso em particular, não é difícil provarmos que as somas em questão produzem resultados finitos para quaisquer  $ k, x \in \mathbb{R}$ , graças ao crescimento exponencial dos fatoriais nos denominadores, que crescem mais rapidamente que qualquer potência presente nos numeradores. Tudo isso pode ser demonstrado rigorosamente, mas demandaria ainda mais tempo deste breve seminário. Por hora, contemple  $(5)$ escrita da seguinte forma e observe como os denominadores crescem rapidamente:
+Devemos enfatizar que todas essas somas em   $(4)$ ,   $(5)$ ,   $(6)  $ e  $(7)$ são infinitas. Devemos sempre ser cuidadosos ao lidarmos com esse tipo de soma, devendo observar sob quais condições as somas fazem sentido, ou seja, quando (e se) elas convergem para um valor finito. Neste caso em particular, não é difícil provarmos que as somas em questão produzem resultados finitos para quaisquer  $ k, x \in \mathbb{R}$ , graças aos fatoriais nos denominadores, que crescem mais rapidamente que qualquer potência presente nos numeradores. Tudo isso pode ser demonstrado rigorosamente, mas demandaria ainda mais tempo deste breve seminário. Por hora, contemple  $(5)$ escrita da seguinte forma e observe como os denominadores crescem rapidamente:
 
 $$
 \begin{aligned}
@@ -259,8 +257,8 @@ $$
 \ln(1 + x) = x - \frac{x^2}{2} + \frac{x^3}{3} - \frac{x^4}{4} + \frac{x^5}{5} - \frac{x^6}{6} + \dots \tag{10}
 $$
 
-Observamos que aqui não temos mais os fatoriais nos denominadores e, de fato, essa série não converge para qualquer  $ x $ , mas apenas para  $-1 < x \leq 1 $ .
-Faça   $ x = 2 $, por exemplo, e veja como as somas parciais oscilam e parecem crescer casa vez mais em módulo:
+Observe que aqui não temos mais os fatoriais nos denominadores e, de fato, essa série não converge para qualquer  $ x $ , mas apenas para  $-1 < x \leq 1 $ .
+Faça   $ x = 2 $, por exemplo, e veja como as somas parciais oscilam e parecem crescer cada vez mais em módulo:
 $$
 \begin{aligned}
 s_1 = 2 \\\

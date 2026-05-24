@@ -4,15 +4,12 @@ description: "It says some files are missing, like a custom.js."
 date:   2015-09-04 16:00:00
 tags: [linux, ubuntu, python, ipython, notebook]
 categories: programming
-math: false
-image:
-    feature: night_sunset.jpg
 ---
 
-I had a working version of IPython running in Ubuntu 14.04, but today I found an
+I had a working version of IPython running on Ubuntu 14.04, but today I found an
 error when starting a notebook from it.
 
-The error is pretty simple and has a quick fix for it:
+The error is pretty simple and has a quick fix:
 
 ```console
 $ ipython notebook
@@ -67,12 +64,11 @@ IOError: [Errno 2] No such file or directory: '/home/allan/.ipython/profile_defa
 The error message in the last line is pretty clear.
 
 The problem is I don't want to use any custom Javascript, so a dirty hack was to create
-an empty file with the name Ipython wanted:
+an empty file with the name IPython wanted:
 
 ```console
 $ touch /home/allan/.ipython/profile_default/static/custom/custom.js
 ```
-
 
 That fixed this first exception problem, but then it complained about another file:
 
@@ -132,4 +128,4 @@ That simple hack worked again:
 $ touch /home/allan/.ipython/profile_default/static/custom/custom.css
 ```
 
-Now I have Ipython notebook up and running without further problems.
+Now I have IPython notebook up and running without further problems.

@@ -4,18 +4,15 @@ description: "Quick troubleshooting installing xlsx and XML packages on Debian W
 date:   2014-08-10 16:15:00
 tags: [r, coursera]
 categories: programming
-math: false
-image:
-    feature: night_sunset.jpg
 ---
 
 I'm doing Coursera's [Specialization in Data Science] and right now I'm in the third course of it, called Getting and Cleaning Data.
 
-In order to answer this week quiz, I needed to install some R packages to load files in different formats. It took me some time to do it, so I'll document my steps here for anyone that may have trouble doing it.
+In order to answer this week's quiz, I needed to install some R packages to load files in different formats. It took me some time to do it, so I'll document my steps here for anyone that may have trouble doing it.
 
 ## Installing xlsx package
 
-I needed to install a package to read  <span style="font-style:italic">xlsx</span> files. I naively attempted to install it in R Studio, running under Debian Wheezy, but I got the following error:
+I needed to install a package to read <span style="font-style:italic">xlsx</span> files. I naively attempted to install it in RStudio, running under Debian Wheezy, but I got the following error:
 
 ```console
 > install.packages("xlsx")
@@ -111,7 +108,7 @@ The downloaded source packages are in
     ‘/tmp/RtmpxpAu4l/downloaded_packages’
 ```
 
-As you can see, it suggested me to run a command to add Java support to R, so I did it:
+As you can see, it suggested that I run a command to add Java support to R, so I did:
 
 ```console
 $ R CMD javareconf
@@ -143,7 +140,7 @@ Done.
 
 Another error! This time, something was wrong with the Java library linking.
 
-First thing I tryed was to change the Java version to 7:
+The first thing I tried was changing the Java version to 7:
 
 ```console
 $ update-alternatives --config java
@@ -166,7 +163,7 @@ $ apt-get install openjdk-7-*
 
 And then the `R CMD javareconf` command worked! But I wasn't done.
 
-Back to RStudio I got another error when installing package  <span style="font-style:italic">rjava</span>, needed by  <span style="font-style:italic">xlsx</span> and the reason why I had to setup Java in the first place. This time the error message was complaining about a missing  <span style="font-style:italic">lzma</span> library. Unfortunately, I can't show you the exact error messsage, as I can't find the log in my system, but anyway, here is the solution:
+Back in RStudio I got another error when installing package <span style="font-style:italic">rJava</span>, needed by <span style="font-style:italic">xlsx</span> and the reason why I had to set up Java in the first place. This time the error message was complaining about a missing <span style="font-style:italic">lzma</span> library. Unfortunately, I can't show you the exact error message, as I can't find the log in my system, but anyway, here is the solution:
 
 ```console
 $ apt-get install liblzma-dev
@@ -176,12 +173,12 @@ And then it worked! I could finally load my <span style="font-style:italic">xlsx
 
 ## Install XML package
 
-After sucessfully installing  <span style="font-style:italic">xlsx</span>, I had to install the  <span style="font-style:italic">XML</span> package, but this one was a lot easier. The only dependency missing in my system was  <span style="font-style:italic">xml2-config</span>, which happend to be part of the  <span style="font-style:italic">libxml2-dev</span> package:
+After successfully installing <span style="font-style:italic">xlsx</span>, I had to install the <span style="font-style:italic">XML</span> package, but this one was a lot easier. The only dependency missing in my system was <span style="font-style:italic">xml2-config</span>, which happened to be part of the <span style="font-style:italic">libxml2-dev</span> package:
 
 ```console
 $ apt-get install libxml2-dev
 ```
 
-After succesfully installing  <span style="font-style:italic">XML</span>     package at RStudio, I could finally finish this week quiz.
+After successfully installing the <span style="font-style:italic">XML</span> package in RStudio, I could finally finish this week's quiz.
 
 [Specialization in Data Science]:https://www.coursera.org/specialization/jhudatascience/1?utm_medium=listingPage
