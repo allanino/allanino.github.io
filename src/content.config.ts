@@ -8,9 +8,6 @@ const blog = defineCollection({
     description: z.string().optional(),
     date: z.coerce.date(),
     tags: z.array(z.string()).optional().default([]),
-    categories: z.union([z.string(), z.array(z.string())]).transform(val =>
-      Array.isArray(val) ? val : [val]
-    ).optional().default(['uncategorized']),
     image: z.union([
       z.string(),
       z.object({

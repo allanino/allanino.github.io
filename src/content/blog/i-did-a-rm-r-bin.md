@@ -3,7 +3,6 @@ title:  "I did a rm -r /bin!"
 description: "How I used Docker to bring back some of my binaries."
 date:   2015-04-08 20:00:00
 tags: [linux, docker, ubuntu]
-categories: programming
 ---
 
 I just did something really stupid:

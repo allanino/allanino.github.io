@@ -3,7 +3,6 @@ title:  "Installing some R packages"
 description: "Quick troubleshooting installing xlsx and XML packages on Debian Wheezy"
 date:   2014-08-10 16:15:00
 tags: [r, coursera]
-categories: programming
 ---
 
 I'm doing Coursera's [Specialization in Data Science] and right now I'm in the third course of it, called Getting and Cleaning Data.
