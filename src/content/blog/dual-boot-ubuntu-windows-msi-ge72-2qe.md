@@ -3,7 +3,6 @@ title:  "Dual boot on a SSD"
 description: "Some steps to install Ubuntu alongside Windows 8.1 on an MSI GE72 2QE laptop with an HDD + SSD setup."
 date:   2015-10-30 12:00:00
 tags: [linux, ubuntu, windows, msi, ge72, 2qe, ssd, uefi]
-categories: programming
 ---
 
 My old LG laptop was unusable for my work. Random shutdowns and overheating were

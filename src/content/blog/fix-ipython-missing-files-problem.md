@@ -3,7 +3,6 @@ title:  "A quick fix for some IPython notebook IOErrors"
 description: "It says some files are missing, like a custom.js."
 date:   2015-09-04 16:00:00
 tags: [linux, ubuntu, python, ipython, notebook]
-categories: programming
 ---
 
 I had a working version of IPython running on Ubuntu 14.04, but today I found an

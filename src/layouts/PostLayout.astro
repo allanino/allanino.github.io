@@ -1,7 +1,7 @@
 ---
 import BaseLayout from './BaseLayout.astro';
 const { post } = Astro.props;
-const { title, date, categories, image } = post.data;
+const { title, date, tags, image } = post.data;
 const featureImage = typeof image === 'string' ? image : image?.feature;
 ---
 <BaseLayout title={title} description={post.data.description}>
@@ -19,8 +19,12 @@ const featureImage = typeof image === 'string' ? image : image?.feature;
         <time datetime={date.toISOString()}>
           {date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
         </time>
-        {categories && categories.length > 0 && (
-          <span class="capitalize">{categories[0]}</span>
+        {tags && tags.length > 0 && (
+          <div class="flex gap-2">
+            {tags.map((tag: string) => (
+              <span class="capitalize bg-zinc-100 dark:bg-zinc-800 px-2 py-0.5 rounded-md text-xs">{tag}</span>
+            ))}
+          </div>
         )}
       </div>
     </header>
