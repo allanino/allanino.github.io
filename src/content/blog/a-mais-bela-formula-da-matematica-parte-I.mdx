@@ -30,7 +30,7 @@ Nosso ponto de partida é a operação de potenciação. Mais especificamente an
 Observe que $a^{\omega}$ irá aproximar-se cada vez mais de $ 1 $ à medida que o valor de $\omega$ aproximar-se de $ 0$. Ou seja, podemos escrever
 $$
 \begin{aligned}
-a^{\omega} = 1 + \psi \implies \psi = a^{\omega} - 1, \quad (1)
+a^{\omega} = 1 + \psi \implies \psi = a^{\omega} - 1, \tag{1}
 \end{aligned}
 $$
 com $\psi \rightarrow 0 $ sempre que $\omega \rightarrow 0$.
@@ -66,7 +66,7 @@ A razão $ k $ é diferente para $ a =5$, mas ela parece aproximar-se de um valo
 Tendo em vista que $k = \frac{\psi}{\omega} \implies \psi = k \omega$, podemos reescrever a equação $(1) $ como:
 $$
 \begin{aligned}
-a^\omega = 1 + k \omega.\quad (2)
+a^\omega = 1 + k \omega.\tag{2}
 \end{aligned}
 $$
 
@@ -87,7 +87,7 @@ $$
 Observe que $ j = \frac{x}{\omega} \rightarrow \infty$, dada a natureza infinitesimal de $\omega$ (um número finito dividido por uma quantidade suficientemente próxima de zero terá como resultado um número tão grande quanto quisermos). Podemos escrever também $\omega = \frac{x}{j} $ e substituir na equação acima, junto com a definição de $ j$, o que nos dá
 $$
 \begin{aligned}
-a^x = \left ( 1 + \frac{kx}{j} \right ) ^ j. \quad (3)
+a^x = \left ( 1 + \frac{kx}{j} \right ) ^ j. \tag{3}
 \end{aligned}
 $$
 
@@ -118,12 +118,12 @@ $$
 
 Agora, se lembrarmos que $j \rightarrow \infty$, veremos que os termos $\frac{1}{j}$, $\frac{2}{j}$, $\frac{3}{j}$, $\frac{4}{j}, \dots \rightarrow 0$, e a monstruosidade acima se reduz a:
 $$
-a^x = 1 + kx + \frac{k^2x^2}{2!} + \frac{k^3x^3}{3!} + \frac{k^4x^4}{4!} + \dots \quad (4)
+a^x = 1 + kx + \frac{k^2x^2}{2!} + \frac{k^3x^3}{3!} + \frac{k^4x^4}{4!} + \dots + \dots + \dots + \dots \tag{4}
 $$
 
 Fazendo $ x = 1$, imediatamente obtemos o valor de $a$ em função apenas de $ k $:
 $$
-a = 1 + k+ \frac{k^2}{2!} + \frac{k^3}{3!} + \frac{k^4}{4!} + \dots \quad (5)
+a = 1 + k+ \frac{k^2}{2!} + \frac{k^3}{3!} + \frac{k^4}{4!} + \dots \tag{5}
 $$
 
 Como exemplo, fazendo $ k = 0.693 $ e utilizando os quatro primeiros termos dessa equação, obtemos $ a = 1.9982$, valor bem próximo de $ 2$.
@@ -135,7 +135,7 @@ Vejamos quais consequências podemos extrair do fato de que $k = 1$ corresponde 
 
 1. Se fizermos $k = 1$ na equação $(5)$, temos:
 $$
-e = 1 + 1 + \frac{1}{2!} + \frac{1}{3!} + \frac{1}{4!} + \dots \quad (6)
+e = 1 + 1 + \frac{1}{2!} + \frac{1}{3!} + \frac{1}{4!} + \dots \tag{6}
 $$
 
 2. Se fizermos $k = 1$ na equação $(2)$, temos:
@@ -158,7 +158,7 @@ Essa última fórmula é geralmente utilizada como definição do número de Eul
 
 $$
 \begin{aligned}
-e^x = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \frac{x^4}{4!} + \dots \quad (7),
+e^x = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \frac{x^4}{4!} + \dots \tag{7},
 \end{aligned}
 $$
 
@@ -190,7 +190,7 @@ a = e^k,
 $$
 e assim, vemos que $ k $ nada mais é do que o logaritmo natural de $a$:
 $$
-k = \ln{a} \quad (8).
+k = \ln{a} \tag{8}.
 $$
 
 Os valores limites de $ k $ obtidos nas tabelas acima são reconhecidos como $\ln(2) = 0.6931471805599453... $ e $\ln(5) = 1.6094379124341003
@@ -222,7 +222,7 @@ $$
 
 Para podermos aplicar o truque do binômio de Newton mais uma vez, façamos $ a = 1 + x $ e lembremos que, por $(8)$, $ k = \ln(a) = \ln(1 + x)$, de modo que a equação acima fica
 $$
-k = \ln(1 + x) = \frac{(1+x)^\omega - 1}{\omega} \quad (9).
+k = \ln(1 + x) = \frac{(1+x)^\omega - 1}{\omega} \tag{9}.
 $$
 
 Agora, pelo binômio de Newton, temos:
@@ -267,7 +267,7 @@ $$
 
 Ou seja, temos:
 $$
-\ln(1 + x) = x - \frac{x^2}{2} + \frac{x^3}{3} - \frac{x^4}{4} + \frac{x^5}{5} - \frac{x^6}{6} + \dots \quad (10)
+\ln(1 + x) = x - \frac{x^2}{2} + \frac{x^3}{3} - \frac{x^4}{4} + \frac{x^5}{5} - \frac{x^6}{6} + \dots \tag{10}
 $$
 
 Observe que aqui não temos mais os fatoriais nos denominadores e, de fato, essa série não converge para qualquer $ x$, mas apenas para $-1 < x \leq 1$.

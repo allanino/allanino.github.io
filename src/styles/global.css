@@ -24,3 +24,16 @@
     content: "" !important;
   }
 }
+
+.katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.katex-display > .katex {
+  min-width: max-content;
+}
+
+.katex-display > .katex > .katex-html {
+  padding-right: 4rem;
+}
