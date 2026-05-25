@@ -22,6 +22,13 @@ const sortedPosts = posts.sort((a, b) => b.data.date.getTime() - a.data.date.get
           {post.data.description && (
             <p class="mt-2 text-zinc-600 dark:text-zinc-400 line-clamp-2">{post.data.description}</p>
           )}
+          {post.data.tags && post.data.tags.length > 0 && (
+            <div class="flex gap-2 mt-3">
+              {post.data.tags.map((tag: string) => (
+                <a href={`/blog/tags/${tag}`} class="capitalize bg-zinc-100 hover:bg-zinc-200 dark:bg-zinc-800 dark:hover:bg-zinc-700 px-2 py-0.5 rounded-md text-xs transition-colors">{tag}</a>
+              ))}
+            </div>
+          )}
         </article>
       ))}
     </div>

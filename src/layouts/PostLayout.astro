@@ -22,7 +22,7 @@ const featureImage = typeof image === 'string' ? image : image?.feature;
         {tags && tags.length > 0 && (
           <div class="flex gap-2">
             {tags.map((tag: string) => (
-              <span class="capitalize bg-zinc-100 dark:bg-zinc-800 px-2 py-0.5 rounded-md text-xs">{tag}</span>
+              <a href={`/blog/tags/${tag}`} class="capitalize bg-zinc-100 hover:bg-zinc-200 dark:bg-zinc-800 dark:hover:bg-zinc-700 px-2 py-0.5 rounded-md text-xs transition-colors">{tag}</a>
             ))}
           </div>
         )}
