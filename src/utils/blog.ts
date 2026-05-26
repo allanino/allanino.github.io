@@ -1,5 +1,8 @@
-export function getPostPath(post: { id: string, data?: { categories?: any, category?: string } }) {
-  const slug = post.id.replace(/^\d{4}-\d{2}-\d{2}-/, '').replace(/\.[^/.]+$/, '');
+const DATE_PREFIX_REGEX = /^\d{4}-\d{2}-\d{2}-/;
+const FILE_EXT_REGEX = /\.[^/.]+$/;
+
+export function getPostPath(post: { id: string }) {
+  const slug = post.id.replace(DATE_PREFIX_REGEX, '').replace(FILE_EXT_REGEX, '');
 
   let category = 'uncategorized';
   if (post.data) {

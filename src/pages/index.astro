@@ -3,9 +3,17 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getPostPath } from '../utils/blog';
 
-const posts = (await getCollection('blog'))
-  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
-  .slice(0, 3);
+const allPosts = await getCollection('blog');
+const posts = allPosts.reduce((acc, post) => {
+  if (acc.length < 3) {
+    acc.push(post);
+    acc.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+  } else if (post.data.date.getTime() > acc[2].data.date.getTime()) {
+    acc[2] = post;
+    acc.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+  }
+  return acc;
+}, [] as typeof allPosts);
 ---
 
 <BaseLayout>
