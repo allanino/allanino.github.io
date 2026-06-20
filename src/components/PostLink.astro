@@ -1,0 +1,24 @@
+---
+import { getEntry } from "astro:content";
+import { getPostPath } from "../utils/blog";
+
+interface Props extends astroHTML.JSX.AnchorHTMLAttributes {
+  file: string;
+  text?: string;
+}
+
+const { file, text, ...attrs } = Astro.props;
+
+const normalizedId = file.replace(/\.[^/.]+$/, "").toLowerCase();
+const post = await getEntry("blog", normalizedId);
+
+if (!post) {
+  throw new Error(`Post "${file}" not found.`);
+}
+
+const href = getPostPath(post);
+---
+
+<a href={href} {...attrs}>
+  {text ?? post.data.title}
+</a>

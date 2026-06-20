@@ -1,7 +1,8 @@
 ---
 import BaseLayout from './BaseLayout.astro';
+import PostLink from '../components/PostLink.astro';
 const { post } = Astro.props;
-const { title, date, tags, image } = post.data;
+const { title, date, tags, image, translation } = post.data;
 const featureImage = typeof image === 'string' ? image : image?.feature;
 ---
 <BaseLayout title={title} description={post.data.description}>
@@ -15,7 +16,7 @@ const featureImage = typeof image === 'string' ? image : image?.feature;
     )}
     <header class="mb-8">
       <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-2 leading-tight tracking-tight">{title}</h1>
-      <div class="flex items-center text-sm text-gray-500 dark:text-gray-400 space-x-4">
+      <div class="flex flex-wrap items-center text-sm text-gray-500 dark:text-gray-400 gap-x-4 gap-y-2">
         <time datetime={date.toISOString()}>
           {date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
         </time>
@@ -24,6 +25,13 @@ const featureImage = typeof image === 'string' ? image : image?.feature;
             {tags.map((tag: string) => (
               <a href={`/blog/tags/${tag}`} class="capitalize bg-zinc-100 hover:bg-zinc-200 dark:bg-zinc-800 dark:hover:bg-zinc-700 px-2 py-0.5 rounded-md text-xs transition-colors">{tag}</a>
             ))}
+          </div>
+        )}
+        {translation && (
+          <span class="text-gray-300 dark:text-zinc-700 select-none">•</span>
+          <div class="flex items-center gap-1.5 text-xs bg-blue-50 dark:bg-blue-950/30 text-blue-600 dark:text-blue-400 px-2.5 py-1 rounded-full font-medium transition-colors hover:bg-blue-100 dark:hover:bg-blue-900/40">
+            <span>{translation.includes('-en') ? "🇺🇸" : "🇧🇷"}</span>
+            <PostLink file={translation} text={translation.includes('-en') ? "Read in English" : "Ler em Português"} class="outline-none" />
           </div>
         )}
       </div>

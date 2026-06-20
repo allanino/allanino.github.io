@@ -4,6 +4,8 @@ vi.mock('astro:content', async () => {
   const { z } = await import('zod');
   return {
     defineCollection: (config: any) => config,
+    getEntry: vi.fn(),
+    getCollection: vi.fn(),
     z
   };
 });

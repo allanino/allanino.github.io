@@ -17,6 +17,7 @@ const blog = defineCollection({
       })
     ]).optional(),
     math: z.boolean().optional().default(false),
+    translation: z.string().optional(),
   }),
 });
 
