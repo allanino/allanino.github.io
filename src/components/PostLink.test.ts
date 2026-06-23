@@ -23,7 +23,7 @@ describe('PostLink.astro', () => {
     });
 
     expect(getEntry).toHaveBeenCalledWith('blog', '2023-10-27-my-blog-post');
-    expect(result).toContain('href="/blog/math/my-blog-post"');
+    expect(result).toContain('href="/blog/my-blog-post"');
     expect(result).toContain('My Awesome Blog Post');
   });
 
@@ -42,7 +42,7 @@ describe('PostLink.astro', () => {
     });
 
     expect(getEntry).toHaveBeenCalledWith('blog', '2023-10-27-my-blog-post');
-    expect(result).toContain('href="/blog/math/my-blog-post"');
+    expect(result).toContain('href="/blog/my-blog-post"');
     expect(result).toContain('Read this post!');
     expect(result).not.toContain('My Awesome Blog Post');
   });
@@ -67,7 +67,7 @@ describe('PostLink.astro', () => {
     });
 
     expect(getEntry).toHaveBeenCalledWith('blog', 'a-mais-bela-formula-da-matematica-parte-i');
-    expect(result).toContain('href="/blog/math/a-mais-bela-formula-da-matematica-parte-i"');
+    expect(result).toContain('href="/blog/a-mais-bela-formula-da-matematica-parte-i"');
   });
 
   it('throws an error if post is not found', async () => {
