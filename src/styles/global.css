@@ -25,6 +25,21 @@
   }
 }
 
+/* Make tables scroll horizontally on small screens instead of overflowing */
+@layer components {
+  .prose {
+    overflow-wrap: break-word;
+  }
+
+  .prose table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
 .katex-display {
   overflow-x: auto;
   overflow-y: hidden;
