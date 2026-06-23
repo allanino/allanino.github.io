@@ -1,70 +1,140 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { Github, Compass } from "lucide-astro";
 
 const projects = [
   {
     title: "Complex Functions Explorer",
-    description: "An interactive 3D visualization tool build in Godot for exploring complex analysis through immersive landscapes.",
-    link: "https://github.com/allanino/complex-functions-explorer"
+    description:
+      "An interactive 3D visualization tool build in Godot for exploring complex analysis through immersive landscapes.",
+    link: "https://github.com/allanino/complex-functions-explorer",
+    demo: "https://allanino.github.io/complex-functions-explorer",
+  },
+  {
+    title: "Zazen Timer",
+    description:
+      "A minimalist Zen meditation timer for Wear OS smartwatches with vibration only feedback.",
+    link: "https://github.com/allanino/zazen_timer",
   },
   {
     title: "Vicsek Model Simulation",
     description: "Simulation of the Vicsek model using HTML5 + Javascript.",
-    link: "https://github.com/allanino/vicsek-model-simulation"
+    link: "https://github.com/allanino/vicsek-model-simulation",
+    demo: "https://allanino.github.io/vicsek-model-simulation",
   },
   {
     title: "Fractals",
-    description: "Mandelbrot set renderer and Buddhabrot renderer implemented with HTML5 canvas.",
-    link: "https://github.com/allanino/fractals"
+    description:
+      "Mandelbrot set renderer and Buddhabrot renderer implemented with HTML5 canvas.",
+    link: "https://github.com/allanino/fractals",
+    demo: "https://allanino.github.io/fractals",
+  },
+  {
+    title: "Chaos Game",
+    description: "Implementation of some chaos games",
+    link: "https://github.com/allanino/chaos-game",
+    demo: "https://allanino.github.io/chaos-game",
   },
   {
     title: "Game of Life",
-    description: "Implementation of Conway's Game of Life using HTML5 + Javascript.",
-    link: "https://github.com/allanino/game-of-life"
+    description:
+      "Implementation of Conway's Game of Life using HTML5 + Javascript.",
+    link: "https://github.com/allanino/game-of-life",
+    demo: "https://allanino.github.io/game-of-life",
   },
   {
     title: "Monty Hall Simulation",
     description: "Simulator for the surprising Monty Hall probability problem.",
-    link: "https://github.com/allanino/monty-hall-simulation"
+    link: "https://github.com/allanino/monty-hall-simulation",
+    demo: "https://allanino.github.io/monty-hall-simulation",
   },
   {
     title: "Domain coloring complex functions",
-    description: "Web application using HTML5 + Javascript to visualize complex functions.",
-    link: "https://github.com/allanino/domain-coloring"
+    description:
+      "Web application using HTML5 + Javascript to visualize complex functions.",
+    link: "https://github.com/allanino/domain-coloring",
+    demo: "https://allanino.github.io/domain-coloring",
   },
   {
     title: "Numbers Music",
-    description: "Listen to mathematical constants. Allows users to create their own math tracks in an interactive web page.",
-    link: "https://github.com/allanino/numbers-music"
+    description:
+      "Listen to mathematical constants. Allows users to create their own math tracks in an interactive web page.",
+    link: "https://github.com/allanino/numbers-music",
+    demo: "https://allanino.github.io/numbers-music",
   },
   {
     title: "DNA information encoding",
-    description: "Python implementation of a scalable and reliable algorithm for DNA storage of information.",
-    link: "https://github.com/allanino/DNA"
+    description:
+      "Python implementation of a scalable and reliable algorithm for DNA storage of information.",
+    link: "https://github.com/allanino/DNA",
   },
   {
     title: "RNN music of the day",
-    description: "Each day I posted a music composed by a trained Recurrent Neural Network (RNN).",
-    link: "https://github.com/allanino/rnn-music-of-the-day"
+    description:
+      "Each day I posted a music composed by a trained Recurrent Neural Network (RNN).",
+    link: "https://github.com/allanino/rnn-music-of-the-day",
+    demo: "https://allanino.github.io/rnn-music-of-the-day",
   },
   {
     title: "Math Wars",
-    description: "A simple Math game inspired by Tux Math using HTML5 + Javascript ",
-    link: "https://github.com/allanino/math-wars"
+    description:
+      "A simple Math game inspired by Tux Math using HTML5 + Javascript ",
+    link: "https://github.com/allanino/math-wars",
+    demo: "https://allanino.github.io/math-wars",
+  },
+  {
+    title: "Lightray LCM",
+    description:
+      "A geometric way to compute the Least Common Multiple of two numbers.",
+    link: "https://github.com/allanino/lightray-lcm",
+    demo: "https://allanino.github.io/lightray-lcm",
+  },
+  {
+    title: "Ballistic Game",
+    description:
+      "A simple game that uses ballistic equations and PyGame to display cannon balls trajectories.",
+    link: "https://github.com/allanino/BallisticGame",
   },
 ];
 ---
+
 <BaseLayout title="Projects">
   <div class="max-w-3xl mx-auto px-4 py-16">
     <h1 class="text-3xl font-bold mb-8">Projects</h1>
     <div class="grid gap-8">
-      {projects.map(project => (
-        <div class="border border-zinc-200 dark:border-zinc-800 rounded-lg p-6 hover:border-blue-500 transition-colors">
-          <h2 class="text-xl font-bold mb-2">{project.title}</h2>
-          <p class="text-zinc-600 dark:text-zinc-400 mb-4">{project.description}</p>
-          <a href={project.link} target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline font-medium">View on GitHub →</a>
-        </div>
-      ))}
+      {
+        projects.map((project) => (
+          <div class="border border-zinc-200 dark:border-zinc-800 rounded-lg p-6 hover:border-blue-500 transition-colors">
+            <h2 class="text-xl font-bold mb-2">{project.title}</h2>
+            <p class="text-zinc-600 dark:text-zinc-400 mb-4">
+              {project.description}
+            </p>
+            <div class="flex gap-4">
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-500"
+              >
+                <Github size={18} />
+                GitHub
+              </a>
+
+              {project.demo && (
+                <a
+                  href={project.demo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-500"
+                >
+                  <Compass size={18} />
+                  Explore
+                </a>
+              )}
+            </div>
+          </div>
+        ))
+      }
     </div>
   </div>
 </BaseLayout>
