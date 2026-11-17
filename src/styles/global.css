@@ -41,6 +41,8 @@
 }
 
 .katex-display {
+  margin: 1.5em 0;
+  padding: 0.25em 0;
   overflow-x: auto;
   overflow-y: hidden;
 }
@@ -49,6 +51,7 @@
   min-width: max-content;
 }
 
-.katex-display > .katex > .katex-html {
-  padding-right: 4rem;
+.katex-display > .katex > .katex-html:has(> .tag) {
+  padding-left: 3rem;
+  padding-right: 3rem;
 }

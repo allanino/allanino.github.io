@@ -105,14 +105,16 @@ Aplicando o Teorema Binomial na forma acima com $ n = j$, $ x = 1 $ e $ y = \fra
 
 $$
 \begin{aligned}
-a^x &= 1 + \frac{j}{1!} \frac{kx}{j} + \frac{j(j-1)}{2!} \frac{k^2x^2}{j^2} + \frac{j(j-1)(j-2)}{3!} \frac{k^3x^3}{j^3}
-      + \frac{j(j-1)(j-2)(j-3)}{4!} \frac{k^4x^4}{j^4} + \dots \\
-    &= 1 + \frac{j}{j} \frac{kx}{1!} +\frac{j(j-1)}{j^2} \frac{k^2x^2}{2!}+ \frac{j(j-1)(j-2)}{j^3} \frac{k^3x^3}{3!}
-      + \frac{j(j-1)(j-2)(j-3)}{j^4} \frac{k^4x^4}{4!} + \dots \\
-    &= 1 + \frac{j}{j} \frac{kx}{1!} + \frac{j}{j} \left ( \frac{j-1}{j} \right ) \frac{k^2x^2}{2!} + \frac{j}{j} \left ( \frac{j-1}{j} \right ) \left ( \frac{j-2}{j} \right ) \frac{k^3x^3}{3!}
-      + \frac{j}{j} \left ( \frac{j-1}{j} \right ) \left ( \frac{j-2}{j} \right ) \left ( \frac{j-3}{j} \right ) \frac{k^4x^4}{4!} + \dots \\
-    &= 1 + 1 \frac{kx}{1!} + 1 \left ( 1- \frac{1}{j} \right ) \frac{k^2x^2}{2!} + 1 \left ( 1- \frac{1}{j} \right ) \left (1 - \frac{2}{j} \right ) \frac{k^3x^3}{3!}
-      + 1 \left ( 1 - \frac{1}{j} \right ) \left ( 1- \frac{2}{j} \right ) \left ( 1- \frac{3}{j} \right ) \frac{k^4x^4}{4!} + \dots
+a^x &= 1 + \frac{j}{1!} \frac{kx}{j} + \frac{j(j-1)}{2!} \frac{k^2x^2}{j^2} + \frac{j(j-1)(j-2)}{3!} \frac{k^3x^3}{j^3} \\
+    &\quad + \frac{j(j-1)(j-2)(j-3)}{4!} \frac{k^4x^4}{j^4} + \dots \\
+    &= 1 + \frac{j}{j} \frac{kx}{1!} + \frac{j(j-1)}{j^2} \frac{k^2x^2}{2!} + \frac{j(j-1)(j-2)}{j^3} \frac{k^3x^3}{3!} \\
+    &\quad + \frac{j(j-1)(j-2)(j-3)}{j^4} \frac{k^4x^4}{4!} + \dots \\
+    &= 1 + \frac{j}{j} \frac{kx}{1!} + \frac{j}{j} \left ( \frac{j-1}{j} \right ) \frac{k^2x^2}{2!} \\
+    &\quad + \frac{j}{j} \left ( \frac{j-1}{j} \right ) \left ( \frac{j-2}{j} \right ) \frac{k^3x^3}{3!} \\
+    &\quad + \frac{j}{j} \left ( \frac{j-1}{j} \right ) \left ( \frac{j-2}{j} \right ) \left ( \frac{j-3}{j} \right ) \frac{k^4x^4}{4!} + \dots \\
+    &= 1 + 1 \frac{kx}{1!} + 1 \left ( 1- \frac{1}{j} \right ) \frac{k^2x^2}{2!} \\
+    &\quad + 1 \left ( 1- \frac{1}{j} \right ) \left (1 - \frac{2}{j} \right ) \frac{k^3x^3}{3!} \\
+    &\quad + 1 \left ( 1 - \frac{1}{j} \right ) \left ( 1- \frac{2}{j} \right ) \left ( 1- \frac{3}{j} \right ) \frac{k^4x^4}{4!} + \dots
 \end{aligned}
 $$
 
@@ -274,13 +276,13 @@ Observe que aqui não temos mais os fatoriais nos denominadores e, de fato, essa
 Faça  $ x = 2$, por exemplo, e veja como as somas parciais oscilam e parecem crescer cada vez mais em módulo:
 $$
 \begin{aligned}
-s_1 &= 2 \\\
-s_2 &= 2 - \frac{2^2}{2} = 0 \\\
-s_3 &= 2 - \frac{2^2}{2} + \frac{2^3}{3} = 2.666... \\\
-s_4 &= 2 - \frac{2^2}{2} + \frac{2^3}{3} - \frac{2^4}{4} = -1.333... \\\
-s_5 &= 2 - \frac{2^2}{2} + \frac{2^3}{3} - \frac{2^4}{4} + \frac{2^5}{5} = 5.066... \\\
-s_6 &= 2 - \frac{2^2}{2} + \frac{2^3}{3} - \frac{2^4}{4} + \frac{2^5}{5} - \frac{2^6}{6} = 5.6 \\\
-s_7 &= 2 - \frac{2^2}{2} + \frac{2^3}{3} - \frac{2^4}{4} + \frac{2^5}{5} - \frac{2^6}{6} + \frac{2^7}{7} = 12.6857142857... \\\
+s_1 &= 2 \\
+s_2 &= 2 - \frac{2^2}{2} = 0 \\
+s_3 &= 2 - \frac{2^2}{2} + \frac{2^3}{3} = 2.666... \\
+s_4 &= 2 - \frac{2^2}{2} + \frac{2^3}{3} - \frac{2^4}{4} = -1.333... \\
+s_5 &= 2 - \frac{2^2}{2} + \frac{2^3}{3} - \frac{2^4}{4} + \frac{2^5}{5} = 5.066... \\
+s_6 &= 2 - \frac{2^2}{2} + \frac{2^3}{3} - \frac{2^4}{4} + \frac{2^5}{5} - \frac{2^6}{6} = 5.6 \\
+s_7 &= 2 - \frac{2^2}{2} + \frac{2^3}{3} - \frac{2^4}{4} + \frac{2^5}{5} - \frac{2^6}{6} + \frac{2^7}{7} = 12.6857142857... \\
 s_8 &= 2 - \frac{2^2}{2} + \frac{2^3}{3} - \frac{2^4}{4} + \frac{2^5}{5} - \frac{2^6}{6} + \frac{2^7}{7} - \frac{2^8}{8} = -19.3142857143...
 \end{aligned}
 $$
